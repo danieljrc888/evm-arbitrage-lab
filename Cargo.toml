@@ -3,7 +3,7 @@ name = "helix"
 version = "0.1.0"
 edition = "2021"
 description = "A cyclic DEX arbitrage detector built with Rust and REVM"
-authors = ["Daniel"]
+authors = ["danieljrc888"]
 license = "MIT"
 
 [dependencies]

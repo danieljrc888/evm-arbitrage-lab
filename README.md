@@ -2,7 +2,7 @@
 
 A cyclic DEX arbitrage detector built with Rust and REVM. Scans Ethereum liquidity pools for MEV (Maximal Extractable Value) arbitrage opportunities with dual-mode simulation.
 
-[![CI](https://github.com/YOUR_USERNAME/helix/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/helix/actions/workflows/ci.yml)
+[![CI](https://github.com/danieljrc888/helix/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljrc888/helix/actions/workflows/ci.yml)
 
 ## What it does
 
