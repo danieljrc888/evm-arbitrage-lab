@@ -40,13 +40,11 @@ impl SwapPath {
     }
 
     /// Returns the starting (and ending) token of this cyclic path.
-    #[allow(dead_code)]
     pub fn base_token(&self) -> Address {
         self.swaps[0].token_in
     }
 
     /// Returns all unique pool addresses involved in this path.
-    #[allow(dead_code)]
     pub fn pool_addresses(&self) -> Vec<Address> {
         self.swaps.iter().map(|s| s.pool_address).collect()
     }
@@ -57,7 +55,6 @@ impl SwapPath {
     }
 
     /// Returns true if the path has no swaps.
-    #[allow(dead_code)]
     pub fn is_empty(&self) -> bool {
         self.swaps.is_empty()
     }

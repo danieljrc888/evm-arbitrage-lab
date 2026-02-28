@@ -10,7 +10,6 @@ use super::simulator::SwapSimulator;
 /// A detected arbitrage opportunity with its optimal parameters.
 #[derive(Debug, Clone)]
 pub struct Opportunity {
-    #[allow(dead_code)]
     pub path_id: String,
     pub path_display: String,
     pub optimal_amount_in: u128,

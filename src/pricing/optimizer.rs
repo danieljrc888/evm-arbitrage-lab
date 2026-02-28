@@ -127,7 +127,7 @@ mod tests {
         // Profit function with peak at x=500: profit = -(x-500)^2 + 250000
         // Meaning amount_out = x + (-(x-500)^2 + 250000)
         let eval = |x: u128| -> Option<u128> {
-            let diff = if x > 500 { x - 500 } else { 500 - x };
+            let diff = x.abs_diff(500);
             let profit = 250_000u128.saturating_sub(diff * diff);
             Some(x + profit)
         };
@@ -187,7 +187,7 @@ mod tests {
 
         // Peak at x=750 in range [700, 800]
         let eval = |x: u128| -> Option<u128> {
-            let diff = if x > 750 { x - 750 } else { 750 - x };
+            let diff = x.abs_diff(750);
             let profit = 10_000u128.saturating_sub(diff * diff);
             Some(x + profit)
         };

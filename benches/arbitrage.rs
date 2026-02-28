@@ -5,7 +5,7 @@ use helix::pricing::TernarySearchOptimizer;
 fn bench_ternary_search(c: &mut Criterion) {
     let optimizer = TernarySearchOptimizer::default();
     let eval = |x: u128| -> Option<u128> {
-        let diff = if x > 500 { x - 500 } else { 500 - x };
+        let diff = x.abs_diff(500);
         let profit = 250_000u128.saturating_sub(diff * diff);
         Some(x + profit)
     };

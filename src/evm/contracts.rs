@@ -36,12 +36,6 @@ pub fn get_token0_calldata() -> Bytes {
     Bytes::from(token0Call {}.abi_encode())
 }
 
-/// Encode the calldata for `token1()`.
-#[allow(dead_code)]
-pub fn get_token1_calldata() -> Bytes {
-    Bytes::from(token1Call {}.abi_encode())
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;

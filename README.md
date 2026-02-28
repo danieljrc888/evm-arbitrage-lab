@@ -23,23 +23,21 @@ Connect to RPC → Fork mainnet state → Build swap paths → For each path (in
 
 ```
 src/
-├── lib.rs             Public API (re-exports all modules)
-├── models/            Domain types
-│   ├── token.rs         ERC-20 token representation
-│   ├── pool.rs          Liquidity pool abstraction
-│   └── swap_path.rs     Cyclic swap path with validation
-├── pricing/           Optimization
-│   └── optimizer.rs     Ternary search for optimal input amount
-├── strategy/          Opportunity detection
-│   ├── simulator.rs     SwapSimulator trait
-│   └── arbitrage.rs     Generic ArbitrageDetector<S: SwapSimulator>
-├── evm/               On-chain simulation via REVM
-│   ├── contracts.rs     Uniswap V2 ABI encoding/decoding (sol! macro)
-│   ├── simulator.rs     EvmSimulator (impl SwapSimulator)
+├── lib.rs               Public API (re-exports all modules)
+├── models/              Domain types
+│   └── swap_path.rs       Cyclic swap path with validation
+├── pricing/             Optimization
+│   └── optimizer.rs       Ternary search for optimal input amount
+├── strategy/            Opportunity detection
+│   ├── simulator.rs       SwapSimulator trait
+│   └── arbitrage.rs       Generic ArbitrageDetector<S: SwapSimulator>
+├── evm/                 On-chain simulation via REVM
+│   ├── contracts.rs       Uniswap V2 ABI encoding/decoding (sol! macro)
+│   ├── simulator.rs       EvmSimulator (impl SwapSimulator)
 │   └── shared_backend.rs  Thread-safe lazy RPC backend
-├── config.rs          CLI configuration (clap)
-├── error.rs           Custom error types (thiserror)
-└── main.rs            Entry point & mainnet swap paths
+├── config.rs            CLI configuration (clap)
+├── error.rs             Custom error types (thiserror)
+└── main.rs              Entry point & mainnet swap paths
 ```
 
 ## Key Rust concepts demonstrated
