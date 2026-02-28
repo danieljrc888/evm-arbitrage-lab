@@ -1,19 +1,13 @@
 use clap::Parser;
 
-/// MEV Arbitrage Opportunity Detector — a proof-of-concept CLI tool
-/// that scans Uniswap V2/V3 pools to find cyclic arbitrage opportunities.
+/// Helix — a cyclic DEX arbitrage detector that simulates swaps against
+/// forked mainnet state via REVM.
 #[derive(Debug, Parser)]
 #[command(version, about, long_about = None)]
 pub struct Config {
-    /// Path to a JSON file with pool data (uses built-in sample data if omitted)
-    #[arg(short, long)]
-    pub pools_file: Option<String>,
-
     /// Ethereum RPC URL for REVM-based simulation (e.g. https://eth.llamarpc.com).
-    /// When provided, swaps are simulated against forked mainnet state via REVM
-    /// instead of using the built-in math engine.
     #[arg(long)]
-    pub rpc_url: Option<String>,
+    pub rpc_url: String,
 
     /// Minimum profit in wei to report an opportunity
     #[arg(short, long, default_value_t = 0)]
