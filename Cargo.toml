@@ -1,0 +1,47 @@
+[package]
+name = "helix"
+version = "0.1.0"
+edition = "2021"
+description = "A cyclic DEX arbitrage detector built with Rust and REVM"
+authors = ["Daniel"]
+license = "MIT"
+
+[dependencies]
+# Ethereum primitives and ABI encoding
+alloy = { version = "1.0", features = ["provider-http", "network"] }
+alloy-primitives = { version = "1.0", features = ["serde"] }
+alloy-sol-types = "1.0"
+
+# EVM simulation
+revm = { version = "33", features = ["std", "alloydb"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+thiserror = "2"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Parallelism
+rayon = "1"
+
+# Colored output
+colored = "2"
+
+[dev-dependencies]
+pretty_assertions = "1"
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "arbitrage"
+harness = false
