@@ -123,15 +123,21 @@ cargo test
 cargo bench
 ```
 
-## Limitations
+## Disclaimer
 
-This is a proof of concept. A production MEV bot would additionally need:
+This project is built for **educational and research purposes only**. It demonstrates Rust systems programming, EVM simulation, and DeFi mechanics — it is not a production MEV bot and cannot be used as one.
+
+A production MEV system would additionally require an on-chain execution contract for atomic swaps, private transaction submission via Flashbots/MEV-Share, real-time mempool monitoring, sub-second latency infrastructure, and capital or flashloan integration — none of which are present here.
+
+## Limitations
 
 - **Mempool monitoring** for frontrunning protection
 - **Flashbots/MEV-Share** bundle submission
 - **V3 concentrated liquidity** support with tick traversal
 - **Access list optimization** for gas reduction
 - **Multi-block strategies** and cross-domain MEV
+- **On-chain execution contract** for atomic arbitrage
+- **Dynamic pool discovery** (currently uses hardcoded paths)
 
 ## License
 
