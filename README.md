@@ -1,8 +1,8 @@
-# Helix
+# EVM Arbitrage Lab
 
 A cyclic DEX arbitrage detector built with Rust and REVM. Forks live Ethereum mainnet state to simulate swap paths across Uniswap V2 and Sushiswap, detecting MEV (Maximal Extractable Value) arbitrage opportunities with bit-exact EVM accuracy.
 
-[![CI](https://github.com/danieljrc888/helix/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljrc888/helix/actions/workflows/ci.yml)
+[![CI](https://github.com/danieljrc888/evm-arbitrage-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljrc888/evm-arbitrage-lab/actions/workflows/ci.yml)
 
 ## What it does
 
